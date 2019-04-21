@@ -1,0 +1,23 @@
+<!-- 微信内部提供了轮播图插件 -->
+<swiper class="slides">
+  <swiper-item wx:for="{{slides}}" wx:key="id" >
+    <!-- mode="aspectFill"较短边充满 -->
+    <image src="{{item.image}}"/>
+  </swiper-item>
+</swiper>
+
+<!-- 九宫格部分 -->
+<view class="grids">
+  <!-- 把view-item改为navigator类似于vue中的router-link -->
+  <navigator class="item" wx:for="{{categories}}" url="/pages/list/list?cat={{item.id}}" wx:key="id">
+    <image src="{{item.icon}}"/>
+    <text>{{item.name}}</text>
+  </navigator> 
+</view>
+
+<!-- 下部链接部分 -->
+<view class="links">
+  <image src="/assets/img/link-01.png" />
+  <image src="/assets/img/link-02.png" />
+</view>
+

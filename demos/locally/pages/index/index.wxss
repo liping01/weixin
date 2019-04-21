@@ -1,0 +1,46 @@
+.slides {
+  height: 380rpx;
+}
+.slides image {
+    width: 100%;
+    height: 100%;
+}
+
+.grids {
+  display: flex;
+  /* 换行 */
+  flex-wrap: wrap;
+  background-color: #fff;
+  color: #888;
+  font-size: 28rpx;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+}
+.grids .item {
+  display: flex;
+  /* 垂直排列 */
+  flex-direction: column;
+  /* 垂直居中 */
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  width: 33.3333%;
+  height: 250rpx;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+}
+.grids .item image {
+  width: 70rpx;
+  height: 70rpx;
+}
+.grids .item text {
+  margin-top: 20rpx;
+  display: block;
+}
+
+.links image {
+  width: 360rpx;
+  height: 200rpx;
+  margin-left: 10rpx;
+}
