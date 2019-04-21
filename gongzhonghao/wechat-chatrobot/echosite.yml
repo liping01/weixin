@@ -1,0 +1,28 @@
+#   这是你的 EchoSite 购买域名的服务器标志
+server_addr: easy.echosite.cn:4443
+trust_host_root_certs: false
+
+#   这是你的 EchoSite 注册手机号
+echo_account: 18595756053
+#   这是你的 EchoSite 账户密码
+echo_password: woshimima
+
+#   以下是你需要开启的通道，只能开启属于你的域名通道
+#   以下分别是 http 和 https 以及 tcp 协议的示例
+tunnels:
+  name1:
+    subdomain: "zzweb"
+    proto:
+      http: 127.0.0.1:9999
+  name2:
+    subdomain: "echomod"
+    proto:
+      http: 127.0.0.1:8080
+
+
+
+# 开启命令  先进入到客户端所在的目录 可以选择开启一个或多个通道
+#
+# linux     ./echosite -config=./echosite.yml start name1 name2
+# mac       ./echosite -config=./echosite.yml start name1 name2
+# windows   echosite -config=echosite.yml start name1 name2
