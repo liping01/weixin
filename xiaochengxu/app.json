@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/bear/bear",
+    "pages/hello/hello",    
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "red",
+    "backgroundColor": "#a652ad",
+    "list": [
+      {
+      "pagePath": "pages/bear/bear",
+      "text": "小熊",
+      "iconPath": "img/grid-01.png",
+      "selectedIconPath": "img/grid-03.png"
+    },
+    {
+      "pagePath": "pages/hello/hello",
+      "text": "哈喽",
+      "iconPath": "img/grid-02.png",
+      "selectedIconPath": "img/grid-03.png"
+    }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

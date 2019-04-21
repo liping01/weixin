@@ -1,0 +1,53 @@
+<view class='container'>
+  <text>{{ foo }}</text>
+  <text>{{ fn.addPost(message) }}</text>
+</view>
+
+<!-- 单向数据流 -->
+<view>
+  <text>{{ foo1 }}</text>
+  <input value='{{foo1}}' bindinput='inputChange'></input>
+</view>
+
+<!-- 控制属性（条件渲染） -->
+<view wx:if="{{ flag }}">
+  <text>loading....</text>
+</view>
+<view wx:else>
+  <text>loading done</text>
+</view>
+<view hidden="{{ !flag }}">
+<text>loading....</text>
+</view>
+<view hidden="{{ flag }}">
+<text>load done</text>
+</view>
+<view>
+  <!-- block只是一个包装元素，不会对界面的结构造成任何影响 -->
+  <block wx:if="{{ flag }}">
+    <text>hello world</text>
+  </block>
+  <text>不要隐藏我</text>
+</view>
+
+<!-- 控制属性（列表渲染） -->
+<view>
+  <view wx:for="{{ students }}" wx:for-item="f" wx:key="id">
+    <text>{{ index }}--</text>
+    <text>name:{{ f.name }}</text>
+    <text>age:{{ f.age }}</text>
+  </view>
+</view>
+
+ <!-- 事件处理 -->
+<view>
+  <button bindtap="tapHandle">click me</button>
+</view>
+
+<wxs module="fn"> 
+  module.exports = {
+    addPost: function(msg) {
+      return msg + 1
+    }
+  }
+</wxs>
